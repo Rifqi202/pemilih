@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgba(255, 255, 255, 0.3);
+      height: 400px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .window-login {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      padding: 1.5%;
+      width: 320px;
+      height: 525px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 60px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      position: absolute;
+      top: 20px;
+      left: calc(50% - 50px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 110px;
+    }
+
+    .input-container {
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .icon {
+      padding: 10px;
+      background: #06A003;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+
+    .input-field:focus {
+      border: 2px solid #06A003;
+    }
+
+    .btn {
+      background-color: #06A003;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      opacity: 1;
+      font-weight: bold;
+    }
+
+    .back-login {
+      list-style-type: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .back-login a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .back-login a:hover {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="background">
+    <div class="window-login">
+      <img class="avatar" src="./img/inf1.jpg" alt="">
+      <form style="max-width:500px;margin:auto;">
+        <h2>Registrasi Akun</h2>
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input class="input-field" type="text" placeholder="Nama Lengkap" name="username">
+        </div>
+        <div class="input-container">
+          <i class="fa fa-address-card icon"></i>
+          <input class="input-field" type="text" placeholder="Nomer Induk Mahasiswa" name="nim">
+        </div>
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input class="input-field" type="text" placeholder="Email" name="email">
+        </div>
+        <div class="input-container">
+          <i class="fa fa-key icon"></i>
+          <input class="input-field" type="password" placeholder="Password" name="psw">
+        </div>
+        <div class="input-container">
+          <i class="fa fa-key icon"></i>
+          <input class="input-field" type="password" placeholder="Konfirmasi Password" name="konfrm-psw">
+        </div>
+        <a href=""><button class="btn">Registrasi</button></a>
+      </form>
+      <li class="back-login">Kembali ke <a href="./index.html">Login</a></li>
+    </div>
+  </div>
+  <script>
+    const btn = document.querySelector("form");
+    btn.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      window.location.href = "./index.html";
+    })
+  </script>
+</body>
+
+</html>

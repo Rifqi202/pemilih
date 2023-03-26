@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #F5F5F5; font-family: "Times New Roman", Times, serif;
+        }
+      .flex-container{
+            display:flex;
+        }
+        
+        .ultop {
+            list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #04AA6D; border-radius: 5px; border-top-right-radius: 10px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .ultop img {
+            float: left; width: 50px; height:45px; border-radius: 5px; margin-top: 3px; margin-left: 3px; margin-bottom: 3px;
+        }
+        .judul{
+            float: left; margin-top: 5px; 
+        }
+        .namajudul {
+            letter-spacing: 2px; display: block; color: rgb(255, 255, 255); text-align: center; padding: 6px 15px;  font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        }
+        .user {
+            float: right;
+        }
+        .namauser{
+            font-weight: bold; display: block; color: white; text-align: center; padding: 14px 10px; text-decoration: none; 
+        }
+        .logouser{
+            color: white; float: right; margin-right: 10px; margin-top: 13px; font-size: 1.3em;
+        }
+        .side {
+            height: 90%; float: left;  margin-top: 3px; height: 595px; width: 175px; border-radius: 5px; background-color: #04AA6D; box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        .menu {
+            text-decoration: none; list-style-type: none;  color: white; margin: 0; padding: 0; display: block; 
+        }
+        .menu li a{
+            padding: 9px 5px; margin-top: 10px; color: white; font-size: 20px; font-weight: 500;
+        }
+        li a.menu:hover {
+            background-color:  white; border-radius: 5px; color: #04AA6D; font-size: 18px; font-weight: bold; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        /*dash pemilih*/
+        .totalkandidat {
+            border-left: 5px solid #0275FC; border-top: 2px solid #0275FC; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; font-size: 20px; padding: 15px; margin-top: 20px; margin-left:30px; border-radius: 10px; background-color:white; height: 50px; width: 210px; height: 50px; text-align: left;
+        }
+        .jumlahkandidat {
+            border-left: 5px solid #E9C300; border-top: 2px solid #E9C300; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; font-size: 20px; padding: 15px; margin-top:20px; margin-left:40px; border-radius: 10px; background-color: white; height: 50px; width: 210px; text-align: left; 
+        }
+        .sudahmemilih{
+            border-left: 5px solid #06A003; border-top: 2px solid #06A003; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; font-size: 20px; padding: 15px; margin-top:20px; margin-left:40px; border-radius: 10px; background-color: white; height: 50px; width: 210px; text-align: left;
+        }
+        .belummemilih{
+            border-left: 5px solid red; border-top: 2px solid red; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; font-size: 20px; padding: 15px; margin-top:20px; margin-left:40px;border-radius:10px; background-color:white;  height: 50px; width: 210px; text-align: left;
+        }
+        header{
+            font-size: 28px; margin-left: 15%; margin-top: 30px; letter-spacing: 1.5px; font-weight: bold;
+        }
+        .judulbox {
+            background-color: white; list-style: none; width: 1100px; height:  30px; margin-top: 45px; box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; border-radius: 5px; font-weight: bold;
+        }
+        .judulbox li {
+            padding: 6px 10px;
+        }
+        .boxpanduan {
+            background-color: white; margin-left: 16%; height: 350px; width: 1100px; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; border-radius: 5px;
+        }
+        .boxpanduan h2{
+            font-size: 20px; margin-left: 10px; margin-top: 20px;
+        }
+        .boxpanduan p{
+            margin-left: 10px; font-size: 17px;
+        }
+</style>
+</head>
+<body>
+    <div>
+        <div>
+            <ul class="ultop">
+                <img src="./../img/inf1.jpg" alt="">
+                <li class="judul"><a class="namajudul">INF-VOTE</a></li>
+                <li class="logouser"><i class='fa fa-user-circle'></i></li>
+                <li class="user"><a href="#" class="namauser">Rifqi Febrian</a></li>
+            </ul>
+        </div>
+        <div class="side">
+            <ul class="menu">
+                <li class="dashboard"><a class="menu" href="./dash pemilih.html"><i class="fa fa-home" style="padding-left: 5px; font-size: 1.1em; "></i>
+                Dashboard</a></li>
+                <li class="kotaksuara"><a class="menu" href="./votiing.html"><i class='fa fa-calendar-check-o' style="padding-left: 5px; font-size: 1em;"></i>
+                Bilik Suara</a></li>
+                <li class="logout"><a class="menu" href="/evoting/index.html"><i class='fa fa-sign-out' style="padding-left: 5px; font-size: 1.1em;"></i>
+                Logout</a></li>
+            </ul>
+        </div>
+        <div>
+            <!--  -->
+            <div class="content">
+                <header>Dashboard</header>
+                    <div class="flex-container">
+                        <div class="totalkandidat">Total Kandidat<br>3<i class='bx bx-user' style=" float: right; font-size: 2.5em; margin-top: -25px;"></i></div>
+                        <div class= "jumlahkandidat">Total Pemilih<br>150 <i class='bx bx-group' style="float: right; font-size: 3em; margin-top: -27px;"></i></div>
+                        <div class="sudahmemilih">Sudah Memilih <br>80<i class='bx bx-user-check' style="float: right; font-size: 3em; margin-top: -27px;"></i></div>
+                        <div class="belummemilih">Belum Memilih <br>70<i class='bx bxs-user-x' style="float: right; font-size: 3em; margin-top: -27px;"></i></div>
+                    </div>
+                    <div class="boxpanduan">
+                        <div class="judulbox"><li> Panduan Tata Cara Pemilihan</li></div>
+                        <h2>Berikut ini langkah-langkah cara pemilihan:</h2>
+                        <p>1.  Anda telah melewati langkah pertama yaitu registrasi akun dan login sistem.</p>
+                        <p>2.  Langkah selanjutnya  klik menu kandidat untuk melihat visi & misi dari masing-masing calon kandidat.</p>   
+                        <p>3.  Kemudian klik menu bilik suara untuk melakukan pemilihan.</p>        
+                        <p>4.  Setelah itu klik tombol pilih yang ada di pasangan calon kandidat favorit anda.</p>        
+                        <p>5.  Langkah terakhir klik Iya untuk mengkonfirmasi bahwa pilihan anda sudah benar.</p>        
+                    </div>    
+        </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #F5F5F5; font-family: "Times New Roman", Times, serif;
+        }
+      .flex-container{
+            display:flex;
+        }
+        
+        .ultop {
+            list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #04AA6D; border-radius: 5px; border-top-right-radius: 10px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .ultop img {
+            float: left; width: 50px; height:45px; border-radius: 5px; margin-top: 3px; margin-left: 3px; margin-bottom: 3px;
+        }
+        .judul{
+            float: left; margin-top: 5px; 
+        }
+        .namajudul {
+            letter-spacing: 2px; display: block; color: rgb(255, 255, 255); text-align: center; padding: 6px 15px;  font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        }
+        .user {
+            float: right;
+        }
+        .namauser{
+            font-weight: bold; display: block; color: white; text-align: center; padding: 14px 10px; text-decoration: none; 
+        }
+        .logouser{
+            color: white; float: right; margin-right: 10px; margin-top: 13px; font-size: 1.3em;
+        }
+        .side {
+            height: 90%; float: left;  margin-top: 3px; height: 595px; width: 175px; border-radius: 5px; background-color: #04AA6D; box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        .menu {
+            text-decoration: none; list-style-type: none;  color: white; margin: 0; padding: 0; display: block; 
+        }
+        .menu li a{
+            padding: 9px 5px; margin-top: 10px; color: white; font-size: 20px; font-weight: 500;
+        }
+        li a.menu:hover {
+            background-color:  white; border-radius: 5px; color: #04AA6D; font-size: 18px; font-weight: bold; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        /*detail*/
+        .content{
+            background-color: white; height: 500px; width: 1100px; margin-left: 15%; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        header {
+            font-size: 28px; margin-left: 15%; margin-top: 30px; letter-spacing: 1.5px; font-weight: bold;
+        }
+        .namatabel {
+            background-color: white; list-style: none; width: 1100px; height:  30px; margin-top: 20px; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; border-radius: 5px; font-weight: bold;
+        }
+        .detailkandidat th {
+            float: left; margin-top: 30px; margin-left: 50px; 
+        }
+        .detailkandidat input{
+            margin-left: 100px;
+        }
+        #Nourut {
+            margin-top:25px; height: 25px; width:200px; text-align: left; border-radius: 5px; border: 1px solid black;
+        }
+        #namalengkap {
+            margin-top:25px; height: 25px; width:550px; text-align: left; border-radius: 5px; border: 1px solid black;
+        }
+        #NIM {
+            margin-top:25px; height: 25px; width:200px; text-align: left; border-radius: 5px; border: 1px solid black;
+        }
+        #Visi {
+            margin-top:25px; height: 75px; width:550px; text-align: left; border-radius: 5px; border: 1px solid black;
+        }
+        #Misi {
+            margin-top:25px; height: 75px; width:550px; text-align: left; border-radius: 5px; border: 1px solid black;
+        }
+        .back{
+           color: white; float: right; margin-top: 30px; margin-right: 110px;border: none; width: 85px; height:30px;border-radius:5px; background-color:#DE8500; font-size:15px; color:white; box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; opacity: 0.9;
+        }
+        .back:hover {
+            font-weight: bold; opacity: 1;
+        }
+        .fotokandidat{
+            float: left;  width: 150px; height: 200px; margin-left: 20px; margin-top: 20px;
+        }
+        button a{
+            color: white; text-decoration: none;
+        }
+</style>
+</head>
+<body>
+    <div>
+        <div>
+            <ul class="ultop">
+                <img src="./../img/inf1.jpg" alt="">
+                <li class="judul"><a class="namajudul">INF-VOTE</a></li>
+                <li class="logouser"><i class='fa fa-user-circle'></i></li>
+                <li class="user"><a href="#" class="namauser">Rifqi Febrian</a></li>
+            </ul>
+        </div>
+        <div class="side">
+            <ul class="menu">
+                <li class="dashboard"><a class="menu" href="./dash pemilih.html"><i class="fa fa-home" style="padding-left: 5px; font-size: 1.1em; "></i>
+                Dashboard</a></li>
+                <li class="kotaksuara"><a class="menu" href="./votiing.html"><i class='fa fa-calendar-check-o' style="padding-left: 5px; font-size: 1em;"></i>
+                Bilik Suara</a></li>
+                <li class="logout"><a class="menu" href="/evoting/index.html"><i class='fa fa-sign-out' style="padding-left: 5px; font-size: 1.1em;"></i>
+                Logout</a></li>
+            </ul>
+        </div>
+        <div>
+            <!--  -->
+            <div>
+                <header>Bilik Suara</header>
+                <div class="content">
+                    <div class="namatabel"><li style="padding: 6px 10px;">Detail Data Kandidat</li></div>
+                    <form method="POST" action="">
+                        <table class="detailkandidat">
+                            <img class="fotokandidat" src="./../img/profil1.jpg" alt="">
+                            <tr>
+                                <th>No.Urut</th>
+                                <td><input type="text" id="Nourut" name="Nourut"> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <td><input type="text" id="namalengkap" name="namalengkap">
+                                </td>
+                            </tr>
+                        <tr>
+                            <th> NIM </th>
+                            <td> <input type="text" id="NIM" name="NIM">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="margin-top: 40px;"> Visi </th>
+                            <td> <input type="text" id="Visi" name="Visi">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="margin-top: 40px;"> Misi </th>
+                            <td> <input type="text" id="Misi" name="Misi">
+                            </td>
+                        </table>            
+                    </form>
+                    <button class="back"><a href="./votiing.html"> Kembali </a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

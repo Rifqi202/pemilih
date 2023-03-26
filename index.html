@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgba(255, 255, 255, 0.3);
+      height: 400px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .window-login {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      padding: 1.5%;
+      width: 320px;
+      height: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 100px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      position: absolute;
+      top: 20px;
+      left: calc(50% - 50px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 110px;
+    }
+
+    .input-container {
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .icon {
+      padding: 10px;
+      background: #06A003;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+
+    .input-field:focus {
+      border: 2px solid #06A003;
+    }
+
+    .btn {
+      background-color: #06A003;
+      padding: 10px 10px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+      font-size: 15px;
+      color: white;
+      margin-left: -8px;
+    }
+
+    .btn:hover {
+      opacity: 1;
+      font-weight: bold;
+    }
+
+    .window-login li {
+      list-style-type: none;
+      display: inline;
+    }
+
+    .window-login a {
+      padding: 10px;
+      list-style-type: none;
+      font-size: 13px;
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: blue;
+    }
+
+    a:active {
+      text-decoration: underline;
+    }
+
+    #popup {
+      width: 100%;
+      height: 120%;
+      position: fixed;
+      background: rgba(0, 0, 0, .7);
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      visibility: hidden;
+    }
+
+    .windowpopup {
+      width: 320px;
+      height: 250px;
+      background: #fff;
+      position: relative;
+      padding: 5px;
+      text-align: center;
+      margin-top: 15%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .windowpopup h1 {
+      font-size: 15px;
+      margin-top: 30px;
+    }
+
+    #popup:target {
+      visibility: visible;
+    }
+
+    .btn-psw {
+      padding: 10px 10px;
+      width: 100%;
+      background-color: #06A003;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+      opacity: 0.9;
+      color: white;
+    }
+
+    .btn-psw:hover {
+      font-weight: bold;
+      opacity: 1;
+    }
+
+    .close {
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      position: absolute;
+      top: 5%;
+      right: 0%;
+      padding: 5px 5px;
+      transform: translate(0%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="window-login">
+      <img class="avatar" src="./img/inf1.jpg" alt="">
+      <form style="max-width:500px;margin:auto;">
+        <h2>Login</h2>
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input class="input-field" type="text" placeholder="Nomer Induk Mahasiswa" name="" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-key icon"></i>
+          <input class="input-field" type="password" placeholder="Kata Sandi" name="" required>
+        </div>
+        <a href=""><button class="btn">Login</button></a>
+        <li>
+          <a href="#popup" style="float: left;">Lupa password?</a>
+          <a href="./registrasi.html" style="float: right;">Registrasi</a>
+        </li>
+      </form>
+    </div>
+    <div id="popup">
+      <div class="windowpopup">
+        <a href="#"><span class="close">&times;</span></a>
+        <h1>Isi kolom dibawah ini untuk mendapatkan kata sandi baru</h1>
+        <div class="input-container">
+          <i class="fa fa-address-card icon"></i>
+          <input class="input-field" type="text" placeholder="Nomer Induk Mahasiswa" name="nim">
+        </div>
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input class="input-field" type="text" placeholder="Email" name="email">
+        </div>
+        <a href="./index.html"><button class="btn-psw">Kirim Kata Sandi</button></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.querySelector("form");
+    btn.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      window.location.href = "/evoting/panitia/dashboard copy.html";
+    })
+  </script>
+</body>
+
+</html>

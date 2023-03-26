@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #F5F5F5;
+        }
+        .ultop {
+            list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #04AA6D; border-radius: 5px; border-top-right-radius: 10px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .ultop img {
+            float: left; width: 50px; height:45px; border-radius: 5px; margin-top: 3px; margin-left: 3px; margin-bottom: 3px;
+        }
+        .judul{
+            float: left; margin-top: 5px; 
+        }
+        .namajudul {
+            letter-spacing: 2px; display: block; color: rgb(255, 255, 255); text-align: center; padding: 6px 15px;  font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+        }
+        .user {
+            float: right;
+        }
+        .namauser{
+            font-weight: bold; display: block; color: white; text-align: center; padding: 14px 10px; text-decoration: none; 
+        }
+        .logouser{
+            color: white; float: right; margin-right: 10px; margin-top: 13px; font-size: 1.3em;
+        }
+        .window {
+            text-align: center; width: 1000px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; margin-left: auto; margin-right: auto; margin-top: 20px; border-radius: 5px; background-color: white;
+        }
+        .profilkandidat {
+            margin-left: -30%;  margin-top:35px; font-size: 17px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+        }
+        button {
+            width: 75px; height: 30px; font-size: 15px; background-color: #007AC7; color: white; border: none; border-radius: 5px; margin-bottom: 20px;
+        }
+        h1 {
+            color: red; padding: 5px;
+        }
+        p {
+            font-size: 20px; letter-spacing: 1.5px;
+        }
+        .windowkandidat {
+            background-color: white; height: 385px; width: 1000px; margin-left: auto; margin-right: auto; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        .boxjudul {
+            background-color: white; list-style: none; width: 1000px; height:  30px; margin-top: 20px; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; border-radius: 5px; font-weight: bold;
+        }
+        .boxjudul li{
+            padding: 6px 10px;
+        }
+        .nourut {
+            font-size: 20px; list-style-type: none; font-weight: bold;
+        }
+        .flex-container {
+            text-align: center; display: flex; margin-top: 10px; padding: 5px 65px;
+        }
+        .boxfoto {
+            background-color: #FFFFFF; width: 220px; height: 230px; border-radius: 5px; margin-top: 5px; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        .fotopaslon {
+            width: 120px; height: 160px;  padding-top: 10px; margin-top: 10px;
+        }
+        .boxkandidat1 {
+            margin-right :100px;
+        }
+        .boxkandidat3 {
+            margin-left: 100px;
+        }
+        .boxvote {
+            background-color: #FFFFFF; width: 220px; height: 55px; border-radius: 5px; margin-top: 3px; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        .boxvote li{
+            list-style-type: none; padding: 2px; 
+        }
+        h5 {
+            font-size: large; margin-top: 10px;
+        }
+        
+</style>
+</head>
+<body>
+    <div>
+        <ul class="ultop">
+            <img src="./../img/inf1.jpg" alt="">
+            <li class="judul"><a class="namajudul">INF-VOTE</a></li>
+            <li class="logouser"><i class='fa fa-user-circle'></i></li>
+            <li class="user"><a href="#" class="namauser">Rifqi Febrian</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="window">
+            <h1>TERIMAKASIH TELAH MELAKUKAN PEMILIHAN</h1>
+            <P>Data anda berhasil masuk ke sistem. Silahkan keluar dengan menekan tombol logout dibawah ini.</P>
+            <a href="/evoting/index.html"><button>Logout</button></a>
+        </div>
+        <div class="windowkandidat">
+            <div class="boxjudul">
+                <li>Perolehan Suara</li>
+            </div>
+            <div class="flex-container">
+                <div class="boxkandidat1">
+                    <li class="nourut">01</li>
+                    <div class="boxfoto">
+                        <img src="./../img/profil1.jpg" alt="" class="fotopaslon">
+                        <h5>Ach Subhan</h5>
+                    </div>
+                    <div class="boxvote">
+                        <li style="font-size: 17px;">Jumlah Vote</li>
+                        <li style="font-size: 22px; font-weight: bold;">-</li>
+                    </div>
+                </div>
+                <div class="boxkandidat">
+                    <li class="nourut">02</li>
+                    <div class="boxfoto">
+                        <img src="./../img/profil2.jfif" alt="" class="fotopaslon">
+                        <h5>Rudi Hartono</h5>
+                    </div>
+                    <div class="boxvote">
+                        <li style="font-size: 17px;">Jumlah Vote</li>
+                        <li style="font-size: 22px; font-weight: bold;">-</li>
+                    </div>
+                </div>
+                <div class="boxkandidat3">
+                    <li class="nourut">03</li>
+                    <div class="boxfoto">
+                        <img src="./../img/profil3.jfif" alt="" class="fotopaslon">
+                        <h5>Muhammad Ifan Rosadi</h5>
+                    </div>
+                    <div class="boxvote">
+                        <li style="font-size: 17px;">Jumlah Vote</li>
+                        <li style="font-size: 22px; font-weight: bold;">-</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
